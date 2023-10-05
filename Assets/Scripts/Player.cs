@@ -4,6 +4,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     public Platform CurrentPlatform;
+    public bool Dead = false;
     [SerializeField] private float _bounceSpeed;
     [SerializeField] private Rigidbody _rigidbody;
     [SerializeField] private Game _game;

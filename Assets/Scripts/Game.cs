@@ -42,6 +42,7 @@ public class Game : MonoBehaviour
     public void StartLevel()
     {
         _player.enabled = true;
+        _player.Dead = false;
         CurrentState = StateGame.Playing;
         _levelManagment.CreateLevel();
         _controls.FindLevel();

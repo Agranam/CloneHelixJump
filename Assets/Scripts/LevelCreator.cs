@@ -11,7 +11,7 @@ public class LevelCreator : MonoBehaviour
 
     private void Awake()
     {
-        PlayerDisabled();
+        //PlayerDisabled();
     }
 
     public void CreateLevel()

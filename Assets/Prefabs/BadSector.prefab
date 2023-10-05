@@ -63,7 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 53575fd305ec8f34ba23212970ccac09, type: 2}
+  - {fileID: 2100000, guid: d1e5a191f55cbe445a9e6d0f8cf60c12, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -112,3 +112,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _actionPossibility: 0.3
+  _fallingPlatformPrefab: {fileID: 2323938875507417283, guid: 23a6e97d41187cb43b6b4544eb11c02d, type: 3}

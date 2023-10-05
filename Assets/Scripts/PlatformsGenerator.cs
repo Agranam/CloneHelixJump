@@ -27,8 +27,18 @@ public class PlatformsGenerator : Platform
         if (other.GetComponent<Player>())
         {
             _scoreCalculation.SetLevelScore(_badSectors, _goodSectors);
+            DestroyPlatforms();
         }
     }
+
+    private void DestroyPlatforms()
+    {
+        for (int i = 0; i < _createdPlatform.Count; i++)
+        {
+            Destroy(_createdPlatform[i]);
+        }
+    }
+
     private void Swither(int selectedLevel)
     {
         switch (selectedLevel)

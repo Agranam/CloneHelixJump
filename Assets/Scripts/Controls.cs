@@ -4,7 +4,7 @@ using UnityEngine.UI;
 public class Controls : MonoBehaviour
 {
     [SerializeField] private Slider _setRotationSpeedSlider;
-    private Transform _level;
+    [SerializeField] private Transform _level;
     private Vector3 _previousMousePosition;
     private float _rotationSpeedValue;
     private float preservedRotationSpeedValue
@@ -27,7 +27,7 @@ public class Controls : MonoBehaviour
     {
         if (!_level) return;
 
-        androidControl();
+        pcControl();
     }
 
     public void SetSpeedRotation(float value)

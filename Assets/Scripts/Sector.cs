@@ -3,6 +3,7 @@
 public class Sector : MonoBehaviour
 {
     [SerializeField] private float _actionPossibility = 0.5f;
+    [SerializeField] private GameObject _fallingPlatformPrefab;
 
     private void OnCollisionEnter(Collision collision)
     {
@@ -12,10 +13,15 @@ public class Sector : MonoBehaviour
         float dot = Vector3.Dot(normal, Vector3.up);
         if (dot < _actionPossibility) return;
 
-        action(player);
+        if (!player.Dead)
+            action(player);
     }
     public virtual void action(Player player)
     {
 
+    }
+    internal void OnDestroy()
+    {
+        Instantiate(_fallingPlatformPrefab, transform.position, Quaternion.identity);
     }
 }
